@@ -8,3 +8,6 @@ gem 'meta_search'
 
 gem 'formtastic'
 gem 'haml'
+
+gem 'factory_girl'
+gem 'ffaker'
