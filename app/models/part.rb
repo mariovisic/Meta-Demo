@@ -1,5 +1,7 @@
 class Part < ActiveRecord::Base
 
+  POPULARITIES = [ 'Low', 'Medium' 'High' ]
+
   has_many :robot_parts
   has_many :robots, :through => :robot_parts
 
