@@ -1,12 +1,14 @@
 %h2 robots
 
 = semantic_form_for @search do |f|
-  = f.inputs :class => 'search' do
-    = f.input :name_contains, :label => "Search", :required => false
+  = f.inputs :class => 'search', :title => 'Search' do
+    = f.input :name_contains, :label => 'Name', :required => false
+    = f.input :parts_id_equals, :label => 'Part', :as => :select, :collection => Part.all, :prompt => 'Select A Part', :required => false
+    = f.input :parts_suppliers_id_equals, :label => 'Part Supplier', :as => :select, :collection => Supplier.all, :prompt => 'Select A Part Supplier', :required => false
 
   = f.buttons do
-    = f.submit "Search", :class => 'button button-right'
-    = link_to 'Clear', robots_path, :class => 'button button-clear'
+    = f.submit 'Search'
+    = link_to 'Clear', robots_path
 
 .page-entries-info
   = page_entries_info @robots
