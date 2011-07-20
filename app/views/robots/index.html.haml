@@ -1,10 +1,10 @@
 %h2 robots
 
 = semantic_form_for @search do |f|
-  = f.inputs :class => 'search', :title => 'Search' do
-    = f.input :name_contains, :label => 'Name', :required => false
-    = f.input :parts_id_equals, :label => 'Part', :as => :select, :collection => Part.all, :prompt => 'Select A Part', :required => false
-    = f.input :parts_suppliers_id_equals, :label => 'Part Supplier', :as => :select, :collection => Supplier.all, :prompt => 'Select A Part Supplier', :required => false
+  = f.inputs :class => 'search' do
+    = f.input :name_or_description_contains, :label => 'Search', :required => false
+    = f.input :parts_id_equals, :label => 'Part', :as => :select, :collection => Part.order(:name), :prompt => 'Select A Part', :required => false
+    = f.input :parts_suppliers_id_equals, :label => 'Part Supplier', :as => :select, :collection => Supplier.order(:name), :prompt => 'Select A Part Supplier', :required => false
 
   = f.buttons do
     = f.submit 'Search'
@@ -20,6 +20,7 @@
       %tr
         %th Name
         %th Description
+        %th Parts
     %tbody= render :partial => 'robot', :collection => @robots
 
 = will_paginate @robots
