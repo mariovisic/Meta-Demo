@@ -70,6 +70,11 @@ body table thead th {
   margin: 10px;
   font-size: 16px;
 }
+
+body table thead th a {
+  color: #ffffff;
+}
+
 /* line 46, ../../app/stylesheets/admin.sass */
 body table thead th.center {
   text-align: center;

@@ -2,7 +2,7 @@
 
 = semantic_form_for @search do |f|
   = f.inputs :class => 'search' do
-    = f.input :name_or_description_or_parts_name_or_parts_suppliers_name_contains, :label => 'Search', :required => false
+    = f.input :name_or_description_or_parts_name_or_parts_suppliers_name_contains_any, :label => 'Search', :required => false
     = f.input :parts_id_equals, :label => 'Part', :as => :select, :collection => Part.order(:name), :prompt => 'Select A Part', :required => false
     = f.input :parts_suppliers_id_equals, :label => 'Part Supplier', :as => :select, :collection => Supplier.order(:name), :prompt => 'Select A Part Supplier', :required => false
 
@@ -18,9 +18,9 @@
   %table
     %thead
       %tr
-        %th Name
-        %th Description
-        %th Parts
+        %th= sort_link @search, :name
+        %th= sort_link @search, :description
+        %th= sort_link @search, :parts_name, 'Parts'
     %tbody= render :partial => 'robot', :collection => @robots
 
 = will_paginate @robots
