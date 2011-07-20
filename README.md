@@ -9,20 +9,20 @@ A robot has many parts which have many suppliers which have many manufacturers w
 
 ### Robot
 
-name              - String
+name              - String  
 description       - Text
 
 ### Part
 
-name              - String
-price             - Decimal
+name              - String  
+price             - Decimal  
 popularity        - String (must be either 'low', 'medium', or 'high')
 
 ### Supplier
 
-name              - String
+name              - String  
 
 ### Owner
 
-first_name        - String
+first_name        - String  
 last_name         - String
