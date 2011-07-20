@@ -25,3 +25,8 @@ name             - String
 ### Manufacturer
 
 name             - String
+
+## Installation
+
+`bundle` then run `rake db:create db:migrate db:seed`  
+Use `rails s` to start up application server.
