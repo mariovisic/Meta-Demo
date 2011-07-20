@@ -1,0 +1,94 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Trebuchet MS';
+  font-size: 14px;
+  color: #222;
+}
+
+#wrapper {
+  margin: 0px auto;
+  width: 960px;
+}
+
+h1 {
+  margin: 20px 0px 0px 0px;
+  padding: 0;
+  font-size: 48px;
+  color: #333;
+  text-align: center;
+  font-family: 'Palatino';
+}
+
+h2 {
+  font-size: 40px;
+  color: #006699;
+  font-family: 'Palatino';
+}
+
+a {
+  color: #006699;
+}
+
+.page-entries-info{
+  margin-bottom: 20px;
+}
+
+
+form {
+  margin-bottom: 20px;
+}
+
+form ol{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+form li{
+  margin: 0px;
+  padding: 0px;
+}
+
+fieldset {
+  border: none;
+}
+
+
+
+body table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 40, ../../app/stylesheets/admin.sass */
+body table thead th {
+  background: #006699;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+/* line 46, ../../app/stylesheets/admin.sass */
+body table thead th.center {
+  text-align: center;
+}
+/* line 49, ../../app/stylesheets/admin.sass */
+body table tbody th {
+  font-weight: bold;
+}
+/* line 51, ../../app/stylesheets/admin.sass */
+body table tbody td, body table tbody th {
+  border-bottom: 1px solid #006699;
+  padding: 10px;
+}
+/* line 54, ../../app/stylesheets/admin.sass */
+body table tbody td.center, body table tbody th.center {
+  text-align: center;
+}
+/* line 57, ../../app/stylesheets/admin.sass */
+body .pagination {
+  font-size: 15px;
+  margin-bottom: 20px;
+}

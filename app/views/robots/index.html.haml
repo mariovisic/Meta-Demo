@@ -1,0 +1,24 @@
+%h2 robots
+
+= semantic_form_for @search do |f|
+  = f.inputs :class => 'search' do
+    = f.input :name_contains, :label => "Search", :required => false
+
+  = f.buttons do
+    = f.submit "Search", :class => 'button button-right'
+    = link_to 'Clear', robots_path, :class => 'button button-clear'
+
+.page-entries-info
+  = page_entries_info @robots
+
+- if @robots.any?
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Description
+    %tbody= render :partial => 'robot', :collection => @robots
+
+= will_paginate @robots
+
