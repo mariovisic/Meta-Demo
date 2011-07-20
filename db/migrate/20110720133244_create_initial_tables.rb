@@ -1,4 +1,4 @@
-class CreateAllTables < ActiveRecord::Migration
+class CreateInitialTables < ActiveRecord::Migration
   def self.up
     create_table :robots do |t|
       t.string :name
