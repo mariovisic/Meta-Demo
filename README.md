@@ -3,26 +3,25 @@ A small application to display the abilities of the squeel and meta_search gems.
 
 ## Model Structure
 
-A robot has many parts which have many suppliers which have many manufacturers which in turn have many owners.
+A robot has many parts which have many suppliers which have many manufacturers.
 
-`robot` <-> `parts` <-> `suppliers` <-> `manufacturers` <-> `owners`
+`robot` <-> `parts` <-> `suppliers` <-> `manufacturers`
 
 ### Robot
 
-name              - String  
-description       - Text
+name             - String  
+description      - Text
 
 ### Part
 
-name              - String  
-price             - Decimal  
-popularity        - String (must be either 'low', 'medium', or 'high')
+name             - String  
+price            - Decimal  
+popularity       - String (must be either 'low', 'medium', or 'high')
 
 ### Supplier
 
-name              - String  
+name             - String
 
-### Owner
+### Manufacturer
 
-first_name        - String  
-last_name         - String
+name             - String
