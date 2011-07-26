@@ -3,10 +3,10 @@
 = semantic_form_for @search do |f|
   = f.inputs :class => 'search' do
     = f.input :name_or_description_or_parts_name_or_parts_suppliers_name_contains, :label => 'Search', :required => false
-    = f.input :parts_suppliers_manufacturers_popularity_gt, :label => 'Manufacturer Popularity Better Than', :as => :select, :collection => (1..10).to_a
     = f.input :parts_id_equals, :label => 'Part', :as => :select, :collection => Part.order(:name), :prompt => 'Select A Part', :required => false
     = f.input :parts_suppliers_id_equals, :label => 'Part Supplier', :as => :select, :collection => Supplier.order(:name), :prompt => 'Select A Part Supplier', :required => false
     = f.input :parts_suppliers_manufacturers_id_equals, :label => 'Manufacturer', :as => :select, :collection => Manufacturer.order(:name), :prompt => 'Select A Manufacturer', :required => false
+    = f.input :parts_suppliers_manufacturers_popularity_gt, :label => 'Manufacturer Popularity Greater Than', :as => :select, :collection => (1..10).to_a
 
   = f.buttons do
     = f.submit 'Search'
