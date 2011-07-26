@@ -4,11 +4,22 @@ class Robot < ActiveRecord::Base
   has_many :parts, :through => :robot_parts
 
   def part_names
-    parts.order(:name).map(&:name).to_sentence.presence || 'None'
+    parts.order(:name).select(:name).map(&:name).to_sentence.presence || 'None'
+  end
+
+  def supplier_names
+    suppliers.order(:name).select(:name).map(&:name).to_sentence.presence || 'None'
+  end
+
+  def manufacturer_names
+    manufacturers.order(:name).select(:name).map(&:name).to_sentence.presence || 'None'
+  end
+
+  def suppliers
+    Supplier.joins{parts.robots}.where('robots.id' => id)
   end
 
   def manufacturers
-    # parts.map(&:suppliers).flatten.map(&:manufacturers).flatten
     Manufacturer.joins{suppliers.parts.robots}.where('robots.id' => id)
   end
 

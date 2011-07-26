@@ -1,5 +1,7 @@
 %tr
   %td= robot.name
   %td= robot.description.truncate(80)
-  %td= robot.part_names
+  %td= robot.part_names.truncate(80)
+  %td= robot.supplier_names.truncate(80)
+  %td= robot.manufacturer_names.truncate(80)
 

@@ -15,4 +15,5 @@ end
 
 Factory.define :manufacturer do |f|
   f.name { Faker::Company.name }
+  f.popularity { (1..10).to_a.sample }
 end

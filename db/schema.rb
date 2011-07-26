@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(:version => 20110720133244) do
 
   create_table "manufacturers", :force => true do |t|
     t.string   "name"
+    t.integer  "popularity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

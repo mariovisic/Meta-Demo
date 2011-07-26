@@ -23,6 +23,7 @@ class CreateInitialTables < ActiveRecord::Migration
 
     create_table :manufacturers do |t|
       t.string :name
+      t.integer :popularity
 
       t.timestamps
     end
