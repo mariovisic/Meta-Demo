@@ -7,4 +7,9 @@ class Robot < ActiveRecord::Base
     parts.order(:name).map(&:name).to_sentence.presence || 'None'
   end
 
+  def manufacturers
+    # parts.map(&:suppliers).flatten.map(&:manufacturers).flatten
+    Manufacturer.joins{suppliers.parts.robots}.where('robots.id' => id)
+  end
+
 end
